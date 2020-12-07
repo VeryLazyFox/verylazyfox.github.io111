@@ -25,3 +25,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    with:
+      ACCESS_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
+      BRANCH: main
+      FOLDER: public
