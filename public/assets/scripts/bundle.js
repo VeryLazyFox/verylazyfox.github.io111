@@ -1,0 +1,1 @@
+(()=>{"use strict";var n;n=document.querySelector(".bacon"),fetch("https://baconipsum.com/api/?type=all-meat&paras=3").then((function(n){return n.json()})).then((function(t){var e=t.reduce((function(n,t){return n+"<p>".concat(t,"</p>")}),"");n.innerHTML=e})).catch((function(t){return n.innerHTML=t}))})();
