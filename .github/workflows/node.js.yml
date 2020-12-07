@@ -58,5 +58,5 @@ jobs:
       uses: verylazyfox/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
-        BRANCH: gh-pages
-        FOLDER: dist/angular-ci-cd
+        BRANCH: main
+        FOLDER: public
