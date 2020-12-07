@@ -30,7 +30,7 @@ h5 {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto 1fr auto;
   line-height: 23px;
-  background: red !important; }
+  background: black !important; }
   .wrapper > * {
     grid-column: 2 / -2; }
   .wrapper header {
