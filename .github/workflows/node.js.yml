@@ -7,7 +7,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy GHA to WN-SDK-TEMPORARY
+      - name: Deploy
       uses: MikeHamilton-RW/deploy-common-actions@v1.0
       env:
         GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
