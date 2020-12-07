@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - name: Install and Build
-      run: |
-        npm install
-        npm run-script build
+    - run: npm ci
+    - run: npm install
+    - run: npm run-script build
       with:
         ACCESS_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
         BRANCH: main
