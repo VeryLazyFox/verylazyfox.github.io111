@@ -22,3 +22,11 @@ jobs:
       run: |
         npm install
         npm run build
+        
+    - name: Deploy 🚀
+        uses: VeryLazyFox/verylazyfox.github.io@3.7.1
+        with:
+          GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
+          BRANCH: main # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
