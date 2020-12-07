@@ -24,7 +24,7 @@ jobs:
         npm run build
         
     - name: Deploy 🚀
-        uses: VeryLazyFox/verylazyfox.github.io@3.7.1
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
           BRANCH: main # The branch the action should deploy to.
