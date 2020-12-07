@@ -25,6 +25,7 @@ jobs:
       - run: npm test
       - name: deploy
     with:
-      ACCESS_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
+      uses: verylazyfox/github-pages-deploy-action@releases/v3
+      GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
       BRANCH: main
       FOLDER: public
