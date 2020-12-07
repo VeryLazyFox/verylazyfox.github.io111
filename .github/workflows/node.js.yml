@@ -7,26 +7,34 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - uses: actions/setup-node@v1 #this installs node and npm for us
-      with:
-        node-version: '10.x'
-    - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-    
-    - name: Build
-      run: |
-        npm install
-        npm run build
+      - name: Deploy GHA to WN-SDK-TEMPORARY
+      uses: MikeHamilton-RW/deploy-common-actions@v1.0
+      env:
+        GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
+        USER: VeryLazyFox
+        REPOSITORY: verylazyfox.github.io
+        DEVELOPMENT_BRANCH: main
+        COMMIT_MESSAGE: "Deploy new Github Action"
+    # - name: Checkout
+    #   uses: actions/checkout@v1
+    # - uses: actions/setup-node@v1 #this installs node and npm for us
+    #   with:
+    #     node-version: '10.x'
+    # - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
+    #   with:
+    #     path: ~/.npm
+    #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-node-    
+    # - name: Build
+    #   run: |
+    #     npm install
+    #     npm run build
         
-    - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+    # - name: Deploy 🚀
+    #     uses: JamesIves/github-pages-deploy-action@releases/v3
+    #     with:
+    #       GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
+    #       BRANCH: main # The branch the action should deploy to.
+    #       FOLDER: public # The folder the action should deploy.
+    #       CLEAN: true # Automatically remove deleted files from the deploy branch
