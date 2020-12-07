@@ -23,7 +23,7 @@ jobs:
         npm install
         npm run-script deploy
     - name: Deploy
-      uses: verylazyfox/github-pages-deploy-action@releases/v3
+      uses: verylazyfox/verylazyfox.github.io 
       with:
         GITHUB_TOKEN: 954ae8c10e18ebb78fb4eb71e722d93e7a176dbb
         BRANCH: main
